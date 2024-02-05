@@ -7,6 +7,11 @@ public class PizzaClients {
         Pizza pizza1 = new Pizza("medium",1,1);
         System.out.println(pizza1);
 
+        Pizza pizza2 = new Pizza("large",2,3);
+        System.out.println(pizza2);
+
+
+
     }
 
 }
