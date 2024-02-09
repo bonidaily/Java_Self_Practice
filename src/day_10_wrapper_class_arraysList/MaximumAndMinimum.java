@@ -8,12 +8,25 @@ public class MaximumAndMinimum {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer>list = new ArrayList<>(Arrays.asList(1,2,3,4,5));
-        int minNumber = Collections.min(list);
-        int maxNumber = Collections.max(list);
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
 
+//        int minNumber = Collections.min(list);
+//        int maxNumber = Collections.max(list);
+
+//        System.out.println("Maximum number is " + maxNumber);
+//        System.out.println("Minimum number is " +minNumber);
+
+        int minNumber = 1;
+        int maxNumber = 1;
+        for (Integer i : list) {
+            if (i < minNumber) {
+                minNumber = i;
+            } else if (i > maxNumber) {
+                maxNumber = i;
+            }
+        }
         System.out.println("Maximum number is " + maxNumber);
-        System.out.println("Minimum number is " +minNumber);
+        System.out.println("Minimum number is " + minNumber);
     }
 
 }
