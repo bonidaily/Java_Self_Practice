@@ -8,23 +8,23 @@ public class StudentGrade {
 
         String[] names = {"Anna", "Nancy", "Sarah"};
         int[] scores = {90, 75, 80};
-        char[] grades = new char[scores.length];
+        char[] grades = new char[scores.length];//here we create a char array with the same length as scores array
 
-        for (int i = 0; i < scores.length; i++) {
-            if (scores[i] > 100 || scores[i] < 0) {
+        for (int i = 0; i < scores.length; i++) {//here we take every element from scores array and check what number is
+            if (scores[i] > 100 || scores[i] < 0) {//if the number is greater than 100 or smaller than zero, we return nothing
                 return;
             }
-            if (scores[i] > 89) grades[i] = 'A';
-            else if (scores[i] > 79) grades[i] = 'B';
-            else if (scores[i] > 69) grades[i] = 'C';
-            else if (scores[i] > 59) grades[i] = 'D';
-            else grades[i] = 'F';
+            if (scores[i] > 89) grades[i] = 'A';// if the number is geater than 89, we assign grade 'A' to first element in array grades
+            else if (scores[i] > 79) grades[i] = 'B';//same we do here with grade B
+            else if (scores[i] > 69) grades[i] = 'C';//same with grade C
+            else if (scores[i] > 59) grades[i] = 'D';//same with grade D
+            else grades[i] = 'F';//for every other between zero and 59 we rreturn 'F'
         }
         System.out.println("Grades: " + Arrays.toString(grades));
 
         for (int i = 0; i < names.length; i++) {
             System.out.println(names[i] + "'s score is " + scores[i] + ", and grade is " + grades[i]);
-        }
+        }//here for every element in names array we print its name,scores and grade
 
     }
 
