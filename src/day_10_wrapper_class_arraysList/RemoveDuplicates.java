@@ -7,20 +7,25 @@ public class RemoveDuplicates {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1,1,2,2,3,3,4,4,5,6,7));
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 1, 2, 2, 3, 3, 4, 4, 5, 6, 7));
         ArrayList<Integer> newList = new ArrayList<>();
 
 
-        for (Integer element : list) {
-            if(!newList.contains(element)){
-                newList.add(element);
+//        for (Integer element : list) {
+//            if(!newList.contains(element)){
+//                newList.add(element);
+//            }
+//        }
+//        System.out.println(newList);
+
+        for (int i = 0; i < list.size(); i++) {
+            if (!newList.contains(list.get(i))){
+                newList.add(list.get(i));
             }
         }
         System.out.println(newList);
 
-
     }
-
 }
 //8. Create a class called RemoveDuplicates and write a program with the following specifications:
 //   8.1 Given an ArrayList of integers, remove duplicated numbers.
